@@ -111,7 +111,9 @@ pnpm commit
 
 ### demo功能📷
 
-<video controls src="demo展示.mp4" title="Title"></video>
+### demo功能📷
+
+[![demo 视频预览]https://www.bilibili.com/video/BV1hU8FzyEMM]
 
 ## 管理平台-开发阶段
 
