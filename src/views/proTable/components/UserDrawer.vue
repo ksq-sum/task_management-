@@ -1,0 +1,121 @@
+<template>
+  <el-drawer v-model="drawerVisible" :destroy-on-close="true" size="450px" :title="`${drawerProps.title}用户`">
+    <el-form
+      ref="ruleFormRef"
+      label-width="100px"
+      label-suffix=" :"
+      :rules="rules"
+      :disabled="drawerProps.isView"
+      :model="drawerProps.row"
+      :hide-required-asterisk="drawerProps.isView"
+    >
+      <el-form-item label="用户头像" prop="avatar">
+        <UploadImg v-model:image-url="drawerProps.row!.avatar" width="135px" height="135px" :file-size="3">
+          <template #empty>
+            <el-icon><Avatar /></el-icon>
+            <span>请上传头像</span>
+          </template>
+          <template #tip> 头像大小不能超过 3M </template>
+        </UploadImg>
+      </el-form-item>
+      <el-form-item label="用户名" prop="username">
+        <el-input v-model="drawerProps.row!.username" placeholder="请填写用户名" clearable></el-input>
+      </el-form-item>
+      <el-form-item label="真实姓名" prop="realname">
+        <el-input v-model="drawerProps.row!.realname" placeholder="请填写用户真实姓名" clearable></el-input>
+      </el-form-item>
+      <el-form-item label="密码" prop="psd">
+        <el-input v-model="drawerProps.row!.psd" placeholder="请填写密码" clearable></el-input>
+      </el-form-item>
+      <el-form-item label="性别" prop="gender">
+        <el-select v-model="drawerProps.row!.gender" placeholder="请选择性别" clearable>
+          <el-option v-for="item in genderType" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+      </el-form-item>
+      <el-form-item label="年龄" prop="age">
+        <el-input v-model="drawerProps.row!.age" placeholder="请填写年龄" clearable></el-input>
+      </el-form-item>
+      <el-form-item label="部门" prop="department">
+        <el-select v-model="drawerProps.row!.department" placeholder="请选择部门" clearable>
+          <el-option v-for="item in genderType" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+      </el-form-item>
+      <el-form-item label="手机号码" prop="phone_num">
+        <el-input v-model="drawerProps.row!.phone_num" placeholder="请填写手机号码" clearable></el-input>
+      </el-form-item>
+      <el-form-item label="员工权限" prop="permissions">
+        <el-select v-model="drawerProps.row!.permissions" placeholder="请选择员工权限" clearable>
+          <el-option v-for="item in genderType" :key="item.value" :label="item.label" :value="item.value" />
+        </el-select>
+      </el-form-item>
+      <el-form-item label="邮箱" prop="user_email">
+        <el-input v-model="drawerProps.row!.email" placeholder="请填写邮箱" clearable></el-input>
+      </el-form-item>
+    </el-form>
+    <template #footer>
+      <el-button @click="drawerVisible = false">取消</el-button>
+      <el-button v-show="!drawerProps.isView" type="primary" @click="handleSubmit">确定</el-button>
+    </template>
+  </el-drawer>
+</template>
+
+<script setup lang="ts" name="UserDrawer">
+import { ref, reactive } from "vue";
+import { genderType } from "@/utils/dict";
+import { ElMessage, FormInstance } from "element-plus";
+import { User } from "@/api/interface";
+import UploadImg from "@/components/Upload/Img.vue";
+import UploadImgs from "@/components/Upload/Imgs.vue";
+
+const rules = reactive({
+  avatar: [{ required: true, message: "请上传用户头像" }],
+  photo: [{ required: true, message: "请上传用户照片" }],
+  username: [{ required: true, message: "请填写用户姓名" }],
+  gender: [{ required: true, message: "请选择性别" }],
+  idCard: [{ required: true, message: "请填写身份证号" }],
+  email: [{ required: true, message: "请填写邮箱" }],
+  address: [{ required: true, message: "请填写居住地址" }]
+});
+
+interface DrawerProps {
+  title: string;
+  isView: boolean;
+  row: Partial<User.ResUserList>;
+  api?: (params: any) => Promise<any>;
+  getTableList?: () => void;
+}
+
+const drawerVisible = ref(false);
+const drawerProps = ref<DrawerProps>({
+  isView: false,
+  title: "",
+  row: {}
+});
+
+// 接收父组件传过来的参数
+const acceptParams = (params: DrawerProps) => {
+  drawerProps.value = params;
+  drawerVisible.value = true;
+};
+
+// 提交数据（新增/编辑）
+const ruleFormRef = ref<FormInstance>();
+const handleSubmit = () => {
+  //数据drawerProps.value.row
+  ruleFormRef.value!.validate(async valid => {
+    if (!valid) return;
+    try {
+      await drawerProps.value.api!(drawerProps.value.row);
+      ElMessage.success({ message: `${drawerProps.value.title}用户成功！` });
+      drawerProps.value.getTableList!();
+      drawerVisible.value = false;
+    } catch (error) {
+      console.log(error);
+    }
+  });
+};
+
+defineExpose({
+  acceptParams
+});
+</script>

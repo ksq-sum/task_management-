@@ -1,0 +1,116 @@
+.taskName {
+  font-weight: bold;
+  color: black;
+}
+.main-task {
+  width: 100%;
+  height: 150px;
+  padding-left: 10px;
+  overflow: hidden; /* 隐藏溢出内容 */
+  background-color: white;
+  border-radius: 10px;
+  transition: height 0.3s ease;
+}
+.main-task.collapsed {
+  height: 35px;
+}
+.main-task.another-class {
+  height: 95%;
+}
+.button-gx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px; /* 内边距 */
+  color: black; /* 按钮的文字颜色 */
+  cursor: pointer; /* 鼠标悬停时的指针 */
+  background-color: #a09d9d; /* 按钮的背景色 */
+  border: none; /* 去掉默认边框 */
+  border-radius: 20px; /* 圆角 */
+  transition: background-color 0.3s; /* 背景色变化的过渡效果 */
+}
+.button-gx:hover {
+  /* #00796b; */
+  background-color: #ff6347; /* 鼠标悬停时的背景色 */
+}
+
+/* 按钮 */
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* 启用换行 */
+  gap: 30px; /* 按钮之间的间距 */
+  align-items: center; /* 垂直居中 */
+  height: 80%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.navbar-menu {
+  display: flex; /* 使用 flexbox 布局 */
+  padding: 0; /* 删除内边距 */
+  margin: 0; /* 删除外边距 */
+  list-style-type: none; /* 删除列表样式 */
+}
+.navbar-link {
+  display: block;
+  padding: 14px 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* 鼠标悬浮时的样式 */
+.navbar-link:hover {
+  color: #ff6347;
+  cursor: pointer;
+  background-color: transparent; /* 保持背景色不变 */
+}
+.taskTop {
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+  margin-top: 5px;
+}
+.expand-isCollapsed {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 99%;
+  height: 100%;
+}
+.iconfont.icon-lianxian {
+  font-size: 10px;
+}
+.button-addGx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.expand-lianxian {
+  margin-left: 20px;
+}
+.expand-hover {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  margin-left: 20px;
+  transform: translateY(-50%);
+}
+.lx:hover .expand-hover {
+  position: absolute;
+  display: flex;
+}
+.copytd {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.elUpload {
+  margin-top: 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,52 @@
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.r-p {
+  margin-left: 10px;
+}
+
+/* 按钮 */
+.button-container {
+  display: flex;
+  gap: 10px; /* 按钮之间的间距 */
+  margin-left: 10px;
+}
+.button {
+  padding: 10px 20px; /* 内边距 */
+  color: white; /* 按钮的文字颜色 */
+  cursor: pointer; /* 鼠标悬停时的指针 */
+  background-color: #004d40; /* 按钮的背景色 */
+  border: none; /* 去掉默认边框 */
+  border-radius: 20px; /* 圆角 */
+  transition: background-color 0.3s; /* 背景色变化的过渡效果 */
+}
+.button:hover {
+  /* #00796b; */
+  background-color: #009688; /* 鼠标悬停时的背景色 */
+}
+.input-container {
+  width: 80%;
+  margin-left: 10px;
+}
+.styled-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #009688;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.styled-input::placeholder {
+  font-style: italic;
+  color: #999999;
+}
+.styled-input:focus {
+  border-color: #00796b;
+}

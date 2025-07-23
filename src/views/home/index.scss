@@ -1,0 +1,287 @@
+.make_home {
+  width: 100%;
+  height: 100%;
+  background-image: url("@/assets/images/0-6.jpg");
+  background-position: center; /* 背景图像居中 */
+  background-size: cover; /* 让背景图像覆盖整个div */
+
+  // .home {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  //   height: 100%;
+  //   .home-bg {
+  //     width: 70%;
+  //     max-width: 1200px;
+  //     margin-bottom: 20px;
+  //   }
+  // }
+  .task_detail {
+    display: flex;
+    width: 100%;
+    height: 45%;
+    .task_descript {
+      width: 50%;
+      padding: 0.4rem;
+    }
+    .my_task {
+      width: 50%;
+      padding: 0.4rem;
+      .bott_task {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 2rem;
+        .circle_task {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          .task {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+          .task.font {
+            margin-top: 1.5rem;
+          }
+        }
+        .statistics_task {
+          display: grid;
+          grid-template-rows: repeat(3, 1fr);
+          .audit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          span {
+            margin-left: 2rem;
+          }
+        }
+        .circle {
+          display: flex; /* 使用 flexbox 居中内容 */
+          align-items: center; /* 垂直居中 */
+          justify-content: center; /* 水平居中 */
+          width: 10rem; /* 设置宽度 */
+          height: 10rem; /* 设置高度，确保宽高相等 */
+          font-size: 1.5rem; /* 设置字体大小 */
+          color: black; /* 设置文本颜色 */
+          text-align: center; /* 文本居中 */
+          background-color: white; /* 设置背景颜色 */
+          border-radius: 50%; /* 设置圆角半径为 50% 以形成圆形 */
+        }
+      }
+    }
+  }
+  .task_list {
+    width: 100%;
+    height: 55%;
+    padding: 0.4rem;
+    .task_row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.8rem;
+      border-bottom: 1px solid rgb(190 189 189 / 61.6%);
+    }
+    .real_task_list {
+      height: 70%;
+      padding: 0.8rem;
+      margin-top: 1rem;
+      background-color: white;
+    }
+    .real_task_content {
+      padding: 0.2rem;
+      margin-top: 0.4rem;
+      background-color: #f2f2f7;
+      border-radius: 0.3rem;
+    }
+  }
+  .content {
+    height: 100%;
+    background-color: #f2f2f7;
+  }
+  .content.first {
+    background-image: url("@/assets/images/title01.png");
+    background-position: center; /* 背景图像居中 */
+    background-size: cover; /* 让背景图像覆盖整个div */
+  }
+  .content.myTask {
+    padding: 1rem;
+    color: grey;
+  }
+  .content.taskList {
+    padding: 1.5rem;
+    color: grey;
+    background-image: url("@/assets/images/title03.png");
+    background-position: center; /* 背景图像居中 */
+    background-size: cover; /* 让背景图像覆盖整个div */
+  }
+  .task_columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+.chat-input-container {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #dee2e6;
+}
+.typing-indicator {
+  display: flex;
+  gap: 3px;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.typing-indicator.active {
+  opacity: 1;
+}
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+  border-radius: 50%;
+  animation: typing 1s infinite ease-in-out;
+}
+.chat-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.chat-input {
+  flex-grow: 1;
+  min-height: 40px;
+  max-height: 100px;
+  padding: 0.5rem 1rem;
+  resize: none;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* 聊天窗口样式 */
+.chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  max-height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+  transition: all 0.3s ease;
+}
+
+/* 更新最小化状态样式 */
+.chat-widget.minimized {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* 更新聊天窗口头部样式 */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 修改为两端对齐 */
+  padding: 1rem;
+  color: white;
+  background: #007bff;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 调整标题和控制按钮的布局 */
+.chat-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.chat-controls {
+  margin-left: auto; /* 将控制按钮推到右边 */
+}
+
+/* 最小化状态下的样式调整 */
+.chat-widget.minimized .chat-header {
+  justify-content: center; /* 最小化时居中图 */
+}
+.chat-widget.minimized .chat-title {
+  margin: 0; /* 重置margin */
+}
+
+/* 最小化状态下隐藏不需要的元素 */
+.chat-widget.minimized .chat-title span,
+.chat-widget.minimized .chat-controls,
+.chat-widget.minimized .chat-messages,
+.chat-widget.minimized .typing-indicator,
+.chat-widget.minimized .chat-input-container {
+  display: none;
+}
+
+/* 最小化状态下的图标样式 */
+.chat-widget.minimized .chat-title i {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* 添加悬停效果 */
+.chat-widget.minimized:hover {
+  box-shadow: 0 8px 25px rgb(0 0 0 / 20%);
+  transform: scale(1.1);
+}
+.carousel-controls .fas {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* 添加动画效果 */
+.carousel-controls .btn-circle:hover .fas {
+  animation: buttonPulse 1s infinite;
+}
+.chat-control-btn {
+  padding: 5px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  height: 400px;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+.message-bubble {
+  position: relative;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+}
+.user .message-bubble {
+  color: white;
+  background: #007bff;
+  border-bottom-right-radius: 5px;
+}
+.ai .message-bubble {
+  color: #343a40;
+  background: white;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+}

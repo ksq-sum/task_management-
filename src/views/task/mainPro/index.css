@@ -1,0 +1,278 @@
+[v-cloak] {
+  display: none;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave {
+  transition: opacity 0.5s;
+}
+.body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+.container {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+.header a {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+.header a.active {
+  color: #007bff;
+}
+.header button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+}
+.project {
+  display: flex;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+}
+.project img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+.project-title {
+  font-size: 24px;
+  color: #007bff;
+  cursor: default; 
+}
+.project-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+.project-info span {
+  font-size: 20px;
+  color: #007bff;
+}
+.project-progress {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.project-progress .progress-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+.project-progress .progress-circle span {
+  font-size: 16px;
+  color: #007bff;
+}
+.project-meta {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666666;
+  text-align: left;
+}
+.placeholder {
+  height: 100px;
+  margin-top: 20px;
+  background-color: #e0e0e0;
+}
+a:hover {
+  cursor: default;
+}
+.chat-input-container {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #dee2e6;
+}
+.typing-indicator {
+  display: flex;
+  gap: 3px;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.typing-indicator.active {
+  opacity: 1;
+}
+.typing-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+  border-radius: 50%;
+  animation: typing 1s infinite ease-in-out;
+}
+.chat-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+.chat-input {
+  flex-grow: 1;
+  min-height: 40px;
+  max-height: 100px;
+  padding: 0.5rem 1rem;
+  resize: none;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  outline: none;
+}
+
+/* 聊天窗口样式 */
+.chat-widget {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  max-height: 600px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+  transition: all 0.3s ease;
+}
+
+/* 更新最小化状态样式 */
+.chat-widget.minimized {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* 更新聊天窗口头部样式 */
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 修改为两端对齐 */
+  padding: 1rem;
+  color: white;
+  background: #007bff;
+  border-radius: 12px 12px 0 0;
+}
+
+/* 调整标题和控制按钮的布局 */
+.chat-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.chat-controls {
+  margin-left: auto; /* 将控制按钮推到右边 */
+}
+
+/* 最小化状态下的样式调整 */
+.chat-widget.minimized .chat-header {
+  justify-content: center; /* 最小化时居中图 */
+}
+.chat-widget.minimized .chat-title {
+  margin: 0; /* 重置margin */
+}
+
+/* 最小化状态下隐藏不需要的元素 */
+.chat-widget.minimized .chat-title span,
+.chat-widget.minimized .chat-controls,
+.chat-widget.minimized .chat-messages,
+.chat-widget.minimized .typing-indicator,
+.chat-widget.minimized .chat-input-container {
+  display: none;
+}
+
+/* 最小化状态下的图标样式 */
+.chat-widget.minimized .chat-title i {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* 添加悬停效果 */
+.chat-widget.minimized:hover {
+  box-shadow: 0 8px 25px rgb(0 0 0 / 20%);
+  transform: scale(1.1);
+}
+.carousel-controls .fas {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* 添加动画效果 */
+.carousel-controls .btn-circle:hover .fas {
+  animation: buttonPulse 1s infinite;
+}
+.chat-control-btn {
+  padding: 5px;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1rem;
+  height: 400px;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+.message-bubble {
+  position: relative;
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+}
+.user .message-bubble {
+  color: white;
+  background: #007bff;
+  border-bottom-right-radius: 5px;
+}
+.ai .message-bubble {
+  color: #343a40;
+  background: white;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+}

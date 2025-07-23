@@ -1,0 +1,80 @@
+.role {
+    color: black !important;
+    background-color: #e8f0ff !important;
+    border: 1px solid #e8f0ff !important;
+  }
+  .environment {
+    color: black !important;
+    background-color: #e7f9fd !important;
+    border: 1px solid #e7f9fd !important;
+  }
+  .props {
+    color: black !important;
+    background-color: #ffead6 !important;
+    border: 1px solid #ffead6 !important;
+  }
+  .level-s {
+    color: white !important;
+    background-color: #7459ee !important;
+    border: 1px solid #7459ee !important;
+  }
+  .level-a {
+    color: white !important;
+    background-color: #3f85ff !important;
+    border: 1px solid #3f85ff !important;
+  }
+  .level-b {
+    color: white !important;
+    background-color: #ffce20 !important;
+    border: 1px solid #ffce20 !important;
+  }
+  .level-c {
+    color: white !important;
+    background-color: #fb6514 !important;
+    border: 1px solid #fb6514 !important;
+  }
+  .project-yuanhua {
+    color: black !important;
+    background-color: #d4edda !important;
+    border: 1px solid #d4edda !important;
+  }
+  .project-moxing {
+    color: black !important;
+    background-color: #fff3cd !important;
+    border: 1px solid #fff3cd !important;
+  }
+  .project-bangding {
+    color: black !important;
+    background-color: #f8d7da !important;
+    border: 1px solid #f8d7da !important;
+  }
+  .project-jiesuan {
+    color: black !important;
+    background-color: #d4edda !important;
+    border: 1px solid #d4edda !important;
+  }
+  .pro-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .jxj {
+    background-color: #c3e6cb;
+    
+  }
+  .jxj_x {
+    background-color: #c3e6cb;
+    border: 2px solid #324737;
+  }
+  .ddj {
+    color: white;
+    background-color: rgb(128 128 128 / 27.4%);
+  }
+  .weikaishi{
+    background-color: rgb(235 233 109 / 67.1%)
+  }

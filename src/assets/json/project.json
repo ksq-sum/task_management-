@@ -1,0 +1,58 @@
+{
+  "pro_type": [
+    {
+      "id": 1,
+      "name": "番剧",
+      "value": "番剧"
+    },
+    {
+      "id": 2,
+      "name": "买量",
+      "value": "买量"
+    },
+    {
+      "id": 3,
+      "name": "电影",
+      "value": "电影"
+    },
+    {
+      "id": 4,
+      "name": "其他",
+      "value": "其他"
+    }
+  ],
+  "pro_level": [
+    {
+      "id": 1,
+      "name": "S",
+      "value": "S"
+    },
+    {
+      "id": 2,
+      "name": "A",
+      "value": "A"
+    },
+    {
+      "id": 3,
+      "name": "B",
+      "value": "B"
+    },
+    {
+      "id": 4,
+      "name": "C",
+      "value": "C"
+    }
+  ],
+  "party_asComp": [
+    {
+      "id": 1,
+      "name": "莉莉丝",
+      "value": "莉莉丝"
+    },
+    {
+      "id": 2,
+      "name": "腾讯",
+      "value": "腾讯"
+    }
+  ]
+}

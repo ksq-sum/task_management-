@@ -1,0 +1,123 @@
+.project-type-buy {
+    color: white !important;
+    background-color: #ff6347 !important;
+    border: 1px solid #ff6347 !important;
+  }
+  .project-type-anime {
+    color: white !important;
+    background-color: #9acd32 !important;
+    border: 1px solid #9acd32 !important;
+  }
+  .project-type-ai {
+    color: white !important;
+    background-color: #9932cc !important;
+    border: 1px solid #9932cc !important;
+  }
+  .project-type-movie {
+    color: white !important;
+    background-color: #ffce20 !important;
+    border: 1px solid #ffce20 !important;
+  }
+  .project-type-other {
+    color: white !important;
+    background-color: #4876ff !important;
+    border: 1px solid #4876ff !important;
+  }
+  .level-s {
+    color: black !important;
+    background-color: #e6e6fa !important;
+    border: 1px solid #e6e6fa !important;
+  }
+  .level-a {
+    color: black !important;
+    background-color: #f0f8ff !important;
+    border: 1px solid #f0f8ff !important;
+  }
+  .level-b {
+    color: black !important;
+    background-color: #f0fff0 !important;
+    border: 1px solid #f0fff0 !important;
+  }
+  .level-c {
+    color: black !important;
+    background-color: #faf0e6 !important;
+    border: 1px solid #faf0e6 !important;
+  }
+  .project-status-in-progress {
+    color: black !important;
+    background-color: #e8f0ff !important;
+    border: 1px solid #e8f0ff !important;
+  }
+  .project-status-modified {
+    color: black !important;
+    background-color: #f1f9db !important;
+    border: 1px solid #f1f9db !important;
+  }
+  .project-status-paused {
+    color: black !important;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #f5f5f5 !important;
+  }
+  .project-status-completed {
+    color: black !important;
+    background-color: #e7f9fd !important;
+    border: 1px solid #e7f9fd !important;
+  }
+  .protype-fl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .ml {
+    background-color: #ff6347;
+  }
+  .fj {
+    background-color: #9acd32;
+  }
+  .AI {
+    background-color: #9932cc;
+  }
+  .dy {
+    background-color: #ffce20;
+  }
+  .qt {
+    background-color: #4876ff;
+  }
+  .S {
+    color: black;
+    background-color: #e6e6fa;
+  }
+  .A {
+    color: black;
+    background-color: #f0f8ff;
+  }
+  .B {
+    color: black;
+    background-color: #f0fff0;
+  }
+  .C {
+    color: black;
+    background-color: #faf0e6;
+  }
+  .jx{
+    color: black !important;
+    background-color: #e8f0ff !important;
+  }
+  .xg{
+    color: black !important;
+    background-color: #f1f9db !important;
+  }
+  .zt{
+    color: black !important;
+    background-color: #f5f5f5 !important;
+  }
+  .wc{
+    color: black !important;
+    background-color: #e7f9fd !important;
+  }
+

@@ -1,0 +1,31 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+}
+.group-header {
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f2f2f236;
+}
+.table th,
+.table td {
+  padding: 8px; /* 单元格内边距 */
+  text-align: left; /* 文本左对齐 */
+  border: 1px solid #a9a9a9; /* 设置单元格的边框颜色 */
+}
+.table th {
+  color: #808080; /* 表头的文字颜色 */
+}
+button {
+  padding: 5px 15px; /* 按钮内边距 */
+  color: black; /* 按钮文字颜色 */
+  cursor: pointer; /* 鼠标悬停时变为手型 */
+  background-color: #3eb489; /* 按钮背景颜色 */
+  border: none; /* 去掉边框 */
+  border-radius: 5px; /* 圆角 */
+}

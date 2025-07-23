@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+.card-interior {
+  width: 100%;
+}
+.button-group {
+  display: flex;
+
+  // gap: 10px; /* 按钮之间的间距 */
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+.tab-button {
+  padding: 10px 20px;
+  color: #333333;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+.tab-button.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.tab-button:hover {
+  background-color: #e0e0e0;
+}
+.add-button {
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  background-color: #007bff; /* 蓝色背景 */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.createPro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-button:hover {
+  background-color: #0056b3; /* 深蓝色 */
+}
+.separator {
+  margin: 20px 0; /* 设置分割线的上下间距 */
+  border-top: 1px solid #cccccc77; /* 设置分割线的颜色和宽度 */
+}
+.projects {
+  // display: grid;：将容器设置为网格布局，使其能够以行和列的形式排列子元素
+  display: grid;
+
+  // grid-template-columns:这个属性定义网格中的列数和列的大小
+  //  auto-fill：这个函数会自动填充尽可能多的列，以适应容器的宽度
+  //  minmax(300px, 1fr)：这个函数设置每列的最小宽度为 300 像素，同时允许其最大宽度为可用空间的 1 份（1fr）。这意味着，如果有额外的空间，列会均匀地扩展以填充这些空间。
+  grid-template-columns: repeat(auto-fill, minmax(350px, 10fr));
+  gap: 20px;
+}
+.project-card {
+  padding: 20px;
+  background: rgb(255 255 255 / 45.9%);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+}
+.date {
+  font-size: 0.9rem;
+  color: white;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.members {
+  margin: 10px 0;
+}
+.member {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  background-color: #cccccc;
+  border-radius: 50%;
+}
+.status {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 4px;
+}
+.status-progress {
+  padding: 8px;
+}
+.in-progress {
+  background-color: #007bff;
+}
+.planning {
+  background-color: #ffc107;
+}
+.important {
+  background-color: #dc3545;
+}
+.completed {
+  background-color: #28a745;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.edit,
+.delete {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+//弹窗
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(0 0 0 / 70%);
+}
+.modal {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
+}
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.modal-submit {
+  margin-left: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+.tab-button {
+  color: #e0e0e0;
+  background-color: #007bff60;
+  border: none;
+}
+.tab-button.active {
+  color: #e0e0e0;
+  background-color: #007bff;
+  border: none;
+}
